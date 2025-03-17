@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0c2340;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #0c2340;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #0c2340;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #0c2340;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+        .rating {
+            margin-top: 15px;
+        }
+        .rating label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="range"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="congrats-box">
+            <h1>Congratulations!</h1>
+            <p>Your registration was successful.</p>
+            <p>Welcome to Clark College of Science and Technology!</p>
+            <hr>
+
+            <!-- Rating Slider -->
+            <div class="rating">
+                <label for="rate">Rate our website:</label>
+                <input type="range" id="rate" min="1" max="5" value="3">
+            </div>
+            <h3>Rate Your Experience:</h3>
+        
+
+            <table style="margin-left: 0; text-align: left;">
+                <tr>
+                    <td><input type="checkbox" name="rating" value="Excellent"> Excellent!</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="rating" value="Very Good"> Awesome!</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="rating" value="Good">Impressive!</td>
+                </tr>
+            
+            </table>
+            <hr>
+            <a href="MainPage.html" class="btn">Go back to Registration</a>
+            <a href="Log-on.html" class="btn">Login</a>
+        </div>
+    </div>
+</body>
+</html>

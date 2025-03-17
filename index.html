@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Webpage Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #08274d;
+            color: white;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+        .sidebar {
+            width: 250px;
+            background: #ffffff;
+            padding: 20px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            text-align: center;
+        }
+        .sidebar img {
+            width: 200px;
+        }
+        .sidebar h2, .sidebar p {
+            color: black;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+            margin: 5px 0;
+            background: #08274d;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+        }
+        .content {
+            margin-left: 250px;
+            display: flex;
+            width: 80%;
+            justify-content: center;
+        }
+        .right {
+            width: 50%;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+            text-align: center;
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 90%;
+            margin: 10px auto;
+        }
+        .form-group label {
+            flex: 1;
+            text-align: left;
+        }
+        .form-group input, .form-group select {
+            flex: 2;
+        }
+        button {
+            width: 95%;
+            padding: 10px;
+            margin: 5px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .save { background-color: rgb(8, 39, 77); color: white; }
+        .clear { background-color: rgb(128, 0, 0); color: white; }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="Images/Logo.png" alt="Clark College Logo" width="170" height="200">
+        <h2>Welcome to Clark College</h2>
+        <p>Join our community of learners and start your journey in Webpage Development.</p> <br><br>
+        <hr>
+        <h3 style="color: black;">Got More Questions?</h3>
+        <ul>
+            <li><a href="Home.html">About Us</a></li>
+            <li><a href="courses.html">Courses Offered</a></li>
+            <li><a href="Connect_With_Us.html">Connect with Us</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="right">
+            <h2>Join Us - Register Today!</h2>
+            <h5><i>Want to master Web Development? Enroll at CCST and start building amazing websites today!</i></h5>
+            <form id="registrationForm">
+                <input type="text" name="name" placeholder="Full Name" required>
+                <input type="password" name="password" placeholder="Desired Password" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="number" name="age" placeholder="Age" required>
+                
+                <div class="form-group">
+                    <label for="birthdate">Birthdate:</label>
+                    <input type="date" id="birthdate" name="birthdate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="gender">Gender:</label>
+                    <div style="flex: 2; display: flex; gap: 10px; align-items: center;">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="section">Section:</label>
+                    <select id="section" name="section">
+                        <option value="ACT 1A">ACT 1A</option>
+                        <option value="ACT 1B">ACT 1B</option>
+                        <option value="ACT 1C">ACT 1C</option>
+                        <option value="ACT 1D">ACT 1D</option>
+                        <option value="ACT 1E">ACT 1E</option>
+                        <option value="ACT 1F">ACT 1F</option>
+                    </select>
+                </div>
+                
+                <button type="submit" class="save">Register</button>
+                <button type="reset" class="clear">Clear</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("registrationForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents actual form submission
+            window.location.href = "Login.html"; // Redirects to success page
+        });
+    </script>
+</body>
+</html>
